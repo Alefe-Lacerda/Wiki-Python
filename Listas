@@ -1,0 +1,44 @@
+# Exercício 1: 
+# Faça um Programa que leia um vetor de 5 números inteiros e mostre-os.
+
+a = int(input('Digite o primeiro número: '))
+b = int(input('Digite o segundo número: '))
+c = int(input('Digite o terceiro número: '))
+d = int(input('Digite o quarto número: '))
+e = int(input('Digite o quinto número: '))
+
+vetor = [a, b, c, d, e]
+
+for v in vetor:
+    print(v, end=' ')
+    
+    
+    
+# Exercício 2:
+# Faça um Programa que leia um vetor de 10 números reais e mostre-os na ordem inversa.
+
+vetor = []
+while len(vetor) < 10:
+    n = float(input('Digite números 10 vezes: '))
+    vetor.insert(0, n)
+    
+for v in vetor:
+    print(v, end=' ')
+
+
+
+# Exercício 3:
+# Faça um Programa que leia 4 notas, mostre as notas e a média na tela.
+
+notas = []
+
+while len(notas) < 4:
+    nota = float(input('Digite as notas: '))
+    notas.insert(0, nota)
+    
+for indice, nota in enumerate(notas):
+    print('Nota {}: {}'.format(indice+1, nota))
+    
+media = sum(notas) / len(notas)
+
+print('Média:', media)
