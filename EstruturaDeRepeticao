@@ -1,0 +1,148 @@
+# Exercício 1:
+n = float(input("Insira uma nota entre 0 e 10: "))
+while n > 10:
+    n = float(input("Insira uma nota entre 0 e 10: "))
+print("Seu número escolhido foi {}".format(n))
+
+
+
+#Exercício 2:
+user = input("Usuário: ")
+senha = input("Senha: ")
+while user == senha:
+    print("ERRO!")
+    user = input("Usuário: ")
+    senha = input("Senha: ")
+print("Ok, usuário e senha recebidos")
+
+
+
+#Exercício 3:
+
+nome = input("Nome:")
+while len(nome) < 4:
+    nome = input("Digite o nome com 4 ou mais caracteres:")
+
+idade = int(input("Idade:"))
+while idade > 150 or idade < 0:
+    idade = int(input("Sua idade deve estar entre 0 e 150:"))
+
+salario = float(input("Salário:"))
+while salario <= 0:
+    salario = float(input("Seu salário deve ser maior que zero:"))
+
+sexo = input("Sexo(apenas m ou f):")
+while sexo != "m" and sexo != "f":
+    sexo = input("Coloque apenas m ou f:")
+
+estado_civil = input("Estado Civil(apenas s, c, v ou d):")
+while estado_civil != "s" and estado_civil != "c" and estado_civil != "v" and estado_civil != "d":
+    estado_civil = input("Seu estado civil deve ser s, c, v ou d:")
+
+
+
+#Exercício 4:
+
+numero_habitantes_afeganistao = 80000
+numero_habitantes_brasil = 200000
+anos = 0
+
+while numero_habitantes_afeganistao <= numero_habitantes_brasil:
+    taxa_crescimento_afeganistao = int(numero_habitantes_afeganistao * (3 / 100))
+    taxa_crescimento_brasil = int(numero_habitantes_brasil * (1.5 / 100))
+    numero_habitantes_afeganistao += taxa_crescimento_afeganistao
+    numero_habitantes_brasil += taxa_crescimento_brasil
+    anos += 1
+print("O Afeganistão alcançará o Brasil em população em {} anos".format(anos))
+
+# Exercício 5:
+anos = 0
+pais_a = ""
+pais_b = ""
+numero_habitantes_a = 0
+numero_habitantes_b = 0
+while pais_a == pais_b or numero_habitantes_a >= numero_habitantes_b :
+    #Variáveis país A
+    pais_a = input("Nome do país que tem menos habitantes:")
+    numero_habitantes_a = int(input("População:"))
+    crescimento_a = int(input("Taxa de crecimento (em porcentagem): "))
+    #Variáveis país B
+    pais_b = input("Nome do país que tem mais habitantes:")
+    numero_habitantes_b = int(input("População:"))
+    crescimento_b = int(input("Taxa de crecimento (em porcentagem): "))
+    if pais_a == pais_b:
+        print("Os nomes dos países devem ser diferentes, tente novamente!")
+    if numero_habitantes_a > numero_habitantes_b:
+        print("Primeiro vem o país que tem menos habitantes!")
+while numero_habitantes_a <= numero_habitantes_b:
+    taxa_crescimento_a = numero_habitantes_a * crescimento_a/100
+    taxa_crescimento_b = numero_habitantes_a * crescimento_b/100
+    numero_habitantes_a += taxa_crescimento_a
+    numero_habitantes_b += taxa_crescimento_b
+    anos += 1
+print("O {} alcançará o {} em população em {} anos".format(pais_a, pais_b, anos))
+
+
+
+#Exercício 6:
+for c in range(1, 21):
+    print(c, end=' ')
+print()
+
+
+
+#Exercício 7:
+numeros = ['','','','','']
+
+for n in numeros:
+    n = float(input("Digite um número:"))
+    numeros.remove('')
+    numeros.append(n)
+print('O maior número que você colocou é o {}'.format(max(numeros)))
+
+
+
+# Exercício 8:
+numeros = ['','','','','']
+
+for n in numeros:
+    n = float(input("Digite um número:"))
+    numeros.remove('')
+    numeros.append(n)
+
+soma = sum(numeros)
+media = soma/5
+
+print("A média desses números é {}".format(media))
+
+
+
+# Exercício 9:
+for n in range(0,25):
+    print(n*2+1, end=' ')
+
+
+
+# Exercício 10:
+
+a = int(input('Digite o primeiro número inteiro: '))
+b = int(input('Digite o segundo número inteiro: '))
+
+while a < b - 1:
+    a += 1
+    print(a)
+
+
+
+# Exercício 11:
+
+a = int(input('Digite o primeiro número inteiro: '))
+b = int(input('Digite o segundo número inteiro: '))
+intervalo = b - a - 1
+lista = []
+while a < b - 1:
+    a += 1
+    lista.append(a)
+soma = sum(lista)
+
+print('A soma do intervalo entre um número e outro é {}'.format(soma))
