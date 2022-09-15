@@ -1,0 +1,175 @@
+# Exercício 1
+x = float(input("Insira um número: "))
+y = float(input("Insira um número: "))
+if x > y:
+   print(x)
+else:
+   print (y)
+
+
+
+# Exercício 2
+x = float(input("digite um valor: "))
+if x > 0:
+   print("{} é positivo".format(x))
+elif x == 0:
+   print("{} é neutro".format(x))
+else:
+   print("{} é negativo".format(x))
+
+
+
+# Exercício 3
+genero = input("Gênero: ")
+if genero == "f":
+   print("Feminino")
+elif genero == "m":
+   print("Masculino")
+else:
+   print("Gênero inválido")
+
+
+
+#Exercício 4
+
+letra = input("Digite um letra: ")
+vogal = "aeiou"
+
+if letra in vogal:
+    print("{} é uma vogal".format(letra))
+else:
+    print("{} é uma consoante".format(letra))
+
+
+
+#Exercício 5:
+
+nota1 = float(input('Inisra a primeira nota: '))
+nota2 = float(input('Insira a segunda nota: '))
+media = (nota1 + nota2)/2
+if media == 10:
+    print('Aprovado com distinção!')
+elif media < 7:
+    print('Reprovado!')
+elif media >= 7:
+    print('Aprovado!')
+
+
+
+# Exercício 6:
+
+x = float(input("Digite um número: "))
+y = float(input("Digite um número: "))
+z = float(input("Digite um número: "))
+
+if x > y and x > z:
+    print(x)
+elif y > x and y > z:
+    print(y)
+else:
+    print(z)
+
+
+
+#Exercício 7:
+
+x = float(input("Digite um número: "))
+y = float(input("Digite um número: "))
+z = float(input("Digite um número: "))
+
+if x > y > z:
+    print("{} é o maior número e {} é o menor número.".format(x, z))
+elif x > z > y:
+    print("{} é o maior número e {} é o menor número.".format(x, y))
+elif y > x > z:
+    print("{} é o maior número e {} é o menor número.".format(y, z))
+elif y > z > x:
+    print("{} é o maior número e {} é o menor número.".format(y, x))
+elif z > x > y:
+    print("{} é o maior número e {} é o menor número.".format(z, y))
+elif z > y > x:
+    print("{} é o maior número e {} é o menor número.".format(z, x))
+
+
+
+#Exercício 8:
+
+prod1 = "Maçã"
+prod2 = "Laranja"
+prod3 = "Melancia"
+
+preco_produto1 =  float(input("Qual o preço da {}? ".format(prod1)))
+preco_produto2 =  float(input("Qual o preço da {}? ".format(prod2)))
+preco_produto3 =  float(input("Qual o preço da {}? ".format(prod3)))
+
+if preco_produto1 < preco_produto2 and preco_produto1 < preco_produto3:
+    print("Compre {}".format(prod1))
+elif preco_produto2 < preco_produto1 and preco_produto2 < preco_produto3:
+    print("Compre {}".format(prod2))
+elif preco_produto3 < preco_produto2 and preco_produto3 < preco_produto1:
+    print("Compre {}".format(prod3))
+
+
+
+#Exercício 9:
+
+x = float(input("Digite um número: "))
+y = float(input("Digite um número: "))
+z = float(input("Digite um número: "))
+
+if x > y > z:
+    print("{}, {}, {}...".format(x, y, z))
+elif x > z > y:
+    print("{}, {}, {}...".format(x, z, y))
+elif y > x > z:
+    print("{}, {}, {}...".format(y, x, z))
+elif y > z > x:
+    print("{}, {}, {}...".format(y, z, x))
+elif z > x > y:
+    print("{}, {}, {}...".format(z, x, y))
+elif z > y > x:
+    print("{}, {}, {}...".format(z, y, x))
+
+
+
+#Exercício 10:
+
+turno = input("Seu turno (M), (V) ou (N): ")
+matutino = "M"
+vespertino = "V"
+noturno = "N"
+
+if turno == matutino:
+    print("Bom Dia!")
+elif turno == vespertino:
+    print("Boa Tarde!")
+elif turno == noturno:
+    print("Boa Noite!")
+else:
+    print("Valor inválido!")
+
+
+
+#Exercício 11:
+
+salario_atual = float(input('Digite o salário atual: '))
+
+if salario_atual <= 280:
+    aumento = salario_atual * 0.2
+    percentual = '20%'
+elif 280 < salario_atual <= 700:
+    percentual = '15%'
+    aumento = salario_atual * 0.15
+elif 700 < salario_atual < 1500:
+    percentual = '10%'
+    aumento = salario_atual * 0.1
+else:
+    percentual = '5%'
+    aumento = salario_atual * 0.05
+
+salario_aumento = salario_atual + aumento
+
+print('Salário antes do reajuste: R${:.2f}'.format(salario_atual))
+print('Percentual de aumento aplicado: {}'.format(percentual))
+print('Valor do aumento: R${:.2f}'.format(aumento))
+print('Novo salário após aumento: R${:.2f}'.format(salario_aumento))
