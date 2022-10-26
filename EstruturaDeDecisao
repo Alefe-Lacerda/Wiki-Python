@@ -173,3 +173,92 @@ print('Salário antes do reajuste: R${:.2f}'.format(salario_atual))
 print('Percentual de aumento aplicado: {}'.format(percentual))
 print('Valor do aumento: R${:.2f}'.format(aumento))
 print('Novo salário após aumento: R${:.2f}'.format(salario_aumento))
+
+
+#Exercício 12:
+
+valorHora = float(input('Valor por hora: '))
+qtdHora = float(input('Horas trabalhadas: '))
+
+salarioBruto = valorHora * qtdHora
+print('Salário Bruto: R${:.2f}'.format(salarioBruto))
+
+imposto = salarioBruto/20
+print('Imposto de Renda: R${:.2f}'.format(imposto))
+
+inss = salarioBruto/10
+print('INSS: R${:.2f}'.format(inss))
+
+fgts = salarioBruto*0.11
+print('FGTS: R${:.2f}'.format(fgts))
+
+totalDeDesconto = imposto + inss
+print('Total de descontos: R${:.2f}'.format(totalDeDesconto))
+
+salarioLiquido = salarioBruto - totalDeDesconto
+print('Salário Líquido: R${:.2f}'.format(salarioLiquido))
+
+
+#Exercício 13:
+
+dia = int(input('Digite o dia da semana de 1 a 7: '))
+
+if dia == 1:
+  print('Domingo')
+elif dia == 2:
+  print('Segunda')
+elif dia == 3:
+  print('Terça')
+elif dia == 4:
+  print('Quarta')
+elif dia == 5:
+  print('Quinta')
+elif dia == 6:
+  print('Sexta')
+elif dia == 7:
+  print('Sábado')
+else:
+  print('Valor inválido!')
+ 
+ 
+#Exercício 14:
+
+nota1 = float(input('Digite a nota 1 do aluno: '))
+nota2 = float(input('Digite a nota 2 do aluno: '))
+mediaAproveitamento = (nota1 + nota2)/2
+
+if mediaAproveitamento >= 9:
+  print('Média de aproveitamento: {}'.format(mediaAproveitamento))
+  print('Conceito: A')
+elif mediaAproveitamento >= 7.5:
+  print('Média de aproveitamento: {}'.format(mediaAproveitamento))
+  print('Conceito: B')
+elif mediaAproveitamento >= 6:
+  print('Média de aproveitamento: {}'.format(mediaAproveitamento))
+  print('Conceito: C')
+elif mediaAproveitamento >= 4:
+  print('Média de aproveitamento: {}'.format(mediaAproveitamento))
+  print('Conceito: D')
+elif mediaAproveitamento >= 0:
+  print('Média de aproveitamento: {}'.format(mediaAproveitamento))
+  print('Conceito: E')
+  
+
+#Exercício 15:
+
+a = float(input('Digite o primeiro lado: '))
+b = float(input('Digtite o segundo lado: '))
+c = float(input('Digtite o terceiro lado: '))
+
+if a + b > c and a + c > b and b + c > a:
+    print('É possível formar um triângulo!')
+    if a == b and b == c:
+        print('O triângulo formado é um triângulo equilátero :)')
+    elif a == b or a == c or b == c:
+        print('O triângulo formado é um triângulo isóceles :)')
+    else: 
+        print('O triângulo formado é um triângulo escaleno :)')
+else:
+    print('Não é possível formar um triângulo :(')
+    
+ 
