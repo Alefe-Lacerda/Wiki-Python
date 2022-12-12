@@ -262,3 +262,29 @@ else:
     print('Não é possível formar um triângulo :(')
     
  
+#Exercício 16:
+
+import math as mt
+a = float(input('a: '))
+if a == 0:
+    print('Não é equação de segundo grau.')
+else:
+    b = float(input('b: '))
+    c = float(input('c: '))
+    delta = (b * b) - 4 * a * c
+    if delta < 0:
+        print('Δ = {}'.format(delta))
+        print('A equação não possui raízes.')
+    elif delta == 0:
+        print('Δ = {}'.format(delta))
+        raiz = -b/(2*a) 
+        print('x = {}'.format(raiz))
+    elif delta > 0:
+        print('Δ = {}'.format(delta))
+        raiz1 = (-b+mt.sqrt(delta))/(2*a)
+        raiz2 = (-b-mt.sqrt(delta))/(2*a)
+        print('xI = {}'.format(raiz1))
+        print('xII = {}'.format(raiz2))
+        
+        
+print('Cálculo encerrado.')
